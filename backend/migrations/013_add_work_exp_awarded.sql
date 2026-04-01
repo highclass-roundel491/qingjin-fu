@@ -1,0 +1,4 @@
+ALTER TABLE works ADD COLUMN IF NOT EXISTS exp_awarded INTEGER;
+UPDATE works SET exp_awarded = 0 WHERE exp_awarded IS NULL;
+ALTER TABLE works ALTER COLUMN exp_awarded SET DEFAULT 0;
+ALTER TABLE works ALTER COLUMN exp_awarded SET NOT NULL;

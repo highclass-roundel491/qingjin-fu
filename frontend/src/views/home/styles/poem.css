@@ -1,0 +1,105 @@
+.poem-showcase {
+  background: var(--color-paper-light);
+  border: 1px solid var(--color-border);
+  padding: var(--spacing-xl);
+  margin: 0 auto;
+  opacity: 0;
+  animation: fadeInScale 1s ease-out 1.2s forwards;
+  position: relative;
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-normal);
+  max-width: 100%;
+  overflow: visible;
+  box-sizing: border-box;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.05'/%3E%3C/svg%3E");
+}
+
+.poem-showcase::before {
+  content: '';
+  position: absolute;
+  top: 8px;
+  bottom: 8px;
+  left: 8px;
+  right: 8px;
+  border: 1px solid rgba(18, 17, 16, 0.05);
+  pointer-events: none;
+}
+
+.poem-showcase:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+  border-color: rgba(188, 42, 24, 0.2);
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.poem-seal {
+  position: absolute;
+  bottom: 32px;
+  left: 32px;
+  width: 48px;
+  height: 48px;
+  background: var(--color-vermilion);
+  color: var(--color-paper-light);
+  font-family: var(--font-title);
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  transform: rotate(-5deg);
+  box-shadow: 2px 2px 8px rgba(188, 42, 24, 0.2);
+  writing-mode: horizontal-tb; /* Reset writing mode for the seal */
+  border: 2px solid rgba(255,255,255,0.2);
+}
+
+.poem-corner {
+  display: none; /* Removed the modern corner borders in favor of traditional framing */
+}
+
+.poem-text {
+  font-family: var(--font-poem);
+  font-size: clamp(18px, 2.2vw, 28px);
+  line-height: 2;
+  color: var(--color-ink-dark);
+  position: relative;
+  text-align: center;
+  margin-bottom: var(--spacing-md);
+  word-break: break-all;
+  overflow-wrap: break-word;
+}
+
+.poem-line {
+  margin-bottom: var(--spacing-xs);
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2px;
+}
+
+.poem-char {
+  display: inline-block;
+  transition: color 0.4s ease;
+}
+
+.poem-showcase:hover .poem-char:hover {
+  color: var(--color-vermilion);
+}
+
+.poem-author {
+  font-family: var(--font-poem);
+  font-size: 15px;
+  color: var(--color-ink-medium);
+  text-align: right;
+  letter-spacing: 2px;
+  padding-right: var(--spacing-md);
+}

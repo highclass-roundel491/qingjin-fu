@@ -1,0 +1,40 @@
+:root {
+  /* Traditional Chinese Colors */
+  --color-ink-dark: #121110;     /* 墨黑 */
+  --color-ink-medium: #3a3836;   /* 黛黑 */
+  --color-paper-light: #f9f6f0;  /* 宣纸白 */
+  --color-paper-white: #fdfbf7;  /* 铅白 */
+  --color-vermilion: #bc2a18;    /* 朱砂红 */
+  --color-cyan: #45685d;         /* 石绿/玉色 */
+  --color-gold: #b28d57;         /* 苍黄 */
+  --color-border: rgba(18, 17, 16, 0.1);
+  
+  --color-success: #27AE60;
+  --color-warning: #F39C12;
+  --color-error: #E74C3C;
+  --color-info: #3498DB;
+  
+  --font-title: 'Noto Serif SC', 'Songti SC', 'STSong', serif;
+  --font-body: 'Noto Sans SC', 'Inter', sans-serif;
+  --font-poem: 'KaiTi', '楷体', 'STKaiti', serif;
+  
+  --spacing-xs: 8px;
+  --spacing-sm: 16px;
+  --spacing-md: 24px;
+  --spacing-lg: 32px;
+  --spacing-xl: 48px;
+  --spacing-xxl: 64px;
+  --spacing-3xl: 96px;
+  
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  
+  --shadow-sm: 0 4px 12px rgba(18, 17, 16, 0.05);
+  --shadow-md: 0 8px 24px rgba(18, 17, 16, 0.08);
+  --shadow-lg: 0 16px 48px rgba(18, 17, 16, 0.12);
+  
+  --transition-fast: 150ms cubic-bezier(0.4, 0.0, 0.2, 1);
+  --transition-normal: 400ms cubic-bezier(0.25, 0.1, 0.25, 1);
+  --transition-slow: 800ms cubic-bezier(0.25, 0.1, 0.25, 1);
+}

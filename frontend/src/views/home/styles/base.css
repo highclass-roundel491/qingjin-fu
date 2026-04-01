@@ -1,0 +1,43 @@
+.home {
+  min-height: 100vh;
+  /* Background color is now handled by ink-background */
+  background: transparent;
+  position: relative;
+  overflow-x: hidden;
+  color: var(--color-ink-dark);
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+
+  .main-title {
+    font-size: 48px;
+    letter-spacing: 8px;
+  }
+
+  .subtitle {
+    font-size: 14px;
+  }
+
+  .poem-text {
+    font-size: 18px;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+  }
+
+  .feature-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-content {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-links {
+    grid-template-columns: 1fr;
+  }
+}

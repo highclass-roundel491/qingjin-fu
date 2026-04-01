@@ -1,0 +1,21 @@
+INSERT INTO achievements (code, name, description, icon, category, rarity, condition_type, condition_value, exp_reward, points_reward, sort_order) VALUES
+('level_2', '青衿初成', '达到秀才等级', 'level_2', 'growth', 'common', 'user_level', 2, 20, 4, 1),
+('level_4', '会试登阶', '达到贡士等级', 'level_4', 'growth', 'rare', 'user_level', 4, 60, 12, 2),
+('level_6', '探花折桂', '达到探花等级', 'level_6', 'growth', 'epic', 'user_level', 6, 120, 24, 3),
+('level_8', '魁星点斗', '达到状元等级', 'level_8', 'growth', 'legendary', 'user_level', 8, 200, 40, 4),
+('poem_reader_100', '涉猎百篇', '阅读100首诗词', 'poem_reader_100', 'learning', 'rare', 'poems_read', 100, 60, 12, 7),
+('poem_reader_1000', '卷帙浩繁', '阅读1000首诗词', 'poem_reader_1000', 'learning', 'legendary', 'poems_read', 1000, 260, 52, 8),
+('favorite_100', '琳琅诗府', '收藏100首诗词', 'favorite_100', 'learning', 'epic', 'poems_favorited', 100, 90, 18, 9),
+('favorite_200', '锦函万象', '收藏200首诗词', 'favorite_200', 'learning', 'legendary', 'poems_favorited', 200, 160, 32, 10),
+('works_100', '辞章大观', '发布100首作品', 'works_100', 'creation', 'legendary', 'works_published', 100, 260, 52, 6),
+('likes_500', '词宗名动', '累计获得500个点赞', 'likes_500', 'creation', 'legendary', 'works_liked_received', 500, 180, 36, 7),
+('following_10', '诗友满座', '关注10位用户', 'following_10', 'social', 'rare', 'following_count', 10, 40, 8, 4),
+('following_30', '同好云集', '关注30位用户', 'following_30', 'social', 'epic', 'following_count', 30, 80, 16, 5),
+('followers_100', '雅望所归', '拥有100位粉丝', 'followers_100', 'social', 'legendary', 'followers_count', 100, 220, 44, 6),
+('challenge_1', '初试锋芒', '完成1次每日挑战', 'challenge_1', 'challenge', 'common', 'challenges_completed', 1, 20, 4, 4),
+('challenge_15', '诗阵十五', '完成15次每日挑战', 'challenge_15', 'challenge', 'rare', 'challenges_completed', 15, 80, 16, 5),
+('challenge_60', '墨阵长驱', '完成60次每日挑战', 'challenge_60', 'challenge', 'epic', 'challenges_completed', 60, 180, 36, 6),
+('relay_30', '珠玑连城', '完成30场诗词接龙', 'relay_30', 'relay', 'epic', 'relay_games', 30, 120, 24, 6),
+('relay_100', '长风万里', '完成100场诗词接龙', 'relay_100', 'relay', 'legendary', 'relay_games', 100, 260, 52, 7),
+('relay_combo_15', '十五连璧', '在接龙中达成15连击', 'relay_combo_15', 'relay', 'epic', 'relay_max_combo', 15, 120, 24, 8)
+ON CONFLICT (code) DO NOTHING;

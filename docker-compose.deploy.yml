@@ -1,0 +1,79 @@
+name: qingjin-deploy
+
+services:
+  postgres:
+    image: postgres:15
+    container_name: qjf-deploy-postgres
+    environment:
+      POSTGRES_DB: qingjin_fu
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: ${DATABASE_PASSWORD:-defaultpassword123}
+    ports:
+      - "5432:5432"
+    volumes:
+      - D:/qingjin-data/postgres:/var/lib/postgresql/data
+      - ./data/init:/docker-entrypoint-initdb.d
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  redis:
+    image: redis:7
+    container_name: qjf-deploy-redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - deploy_redis_data:/data
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 5
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: qjf-deploy-backend
+    env_file:
+      - ./backend/.env
+    environment:
+      DATABASE_URL: postgresql+asyncpg://postgres:${DATABASE_PASSWORD:-defaultpassword123}@postgres:5432/qingjin_fu
+      REDIS_URL: redis://redis:6379/0
+      SECRET_KEY: ${SECRET_KEY:-qingjin-fu-team-dev-key}
+      AI_DEFAULT_MODEL_TIER: plus
+      HTTP_PROXY: ""
+      HTTPS_PROXY: ""
+      http_proxy: ""
+      https_proxy: ""
+      NO_PROXY: "*"
+      no_proxy: "*"
+    ports:
+      - "8000:8000"
+    volumes:
+      - upload_data:/app/uploads
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    restart: unless-stopped
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: qjf-deploy-frontend
+    ports:
+      - "3000:80"
+    depends_on:
+      - backend
+    restart: unless-stopped
+
+volumes:
+  deploy_redis_data:
+  upload_data:

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <circle cx="32" cy="28" r="16" stroke="#bc2a18" stroke-width="1.5" opacity="0.15" fill="#bc2a18"/>
+  <path d="M32 14c-3 4-7 7-7 12a7 7 0 0 0 14 0c0-5-4-8-7-12z" stroke="#bc2a18" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <path d="M32 26v10" stroke="#bc2a18" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M28 32c-3 1.5-5 1-6 .5" stroke="#bc2a18" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M36 32c3 1.5 5 1 6 .5" stroke="#bc2a18" stroke-width="1.5" stroke-linecap="round"/>
+  <text x="32" y="50" text-anchor="middle" font-family="serif" font-size="9" fill="#bc2a18" opacity="0.7">飞花令</text>
+</svg>

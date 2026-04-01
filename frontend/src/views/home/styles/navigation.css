@@ -1,0 +1,204 @@
+.nav-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: transparent;
+  border-bottom: 1px solid transparent;
+  transition: all var(--transition-normal);
+}
+
+.nav-bar.scrolled {
+  background: rgba(249, 246, 240, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--color-border);
+  box-shadow: var(--shadow-sm);
+}
+
+.nav-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-lg);
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: height var(--transition-normal);
+}
+
+.nav-bar.scrolled .nav-content {
+  height: 64px;
+}
+
+.logo {
+  font-family: var(--font-title);
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--color-ink-dark);
+  letter-spacing: 4px;
+  display: flex;
+  gap: 2px;
+  position: relative;
+}
+
+.logo::after {
+  content: '印';
+  font-family: var(--font-title);
+  font-size: 12px;
+  color: var(--color-paper-white);
+  background: var(--color-vermilion);
+  padding: 2px 4px;
+  border-radius: 2px;
+  position: absolute;
+  top: -4px;
+  right: -20px;
+  transform: rotate(5deg);
+}
+
+.logo-char {
+  display: inline-block;
+  transition: all var(--transition-normal);
+}
+
+.logo:hover .logo-char {
+  color: var(--color-vermilion);
+}
+
+.logo:hover .logo-char:nth-child(1) {
+  transform: translateY(-3px);
+}
+
+.logo:hover .logo-char:nth-child(2) {
+  transform: translateY(-6px);
+  transition-delay: 0.05s;
+}
+
+.logo:hover .logo-char:nth-child(3) {
+  transform: translateY(-3px);
+  transition-delay: 0.1s;
+}
+
+.nav-links {
+  display: flex;
+  gap: var(--spacing-lg);
+}
+
+.nav-link {
+  font-family: var(--font-poem);
+  font-size: 18px;
+  color: var(--color-ink-dark);
+  text-decoration: none;
+  transition: var(--transition-fast);
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 0;
+}
+
+.nav-link-icon {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  opacity: 0.7;
+  transition: all var(--transition-fast);
+}
+
+.nav-link:hover .nav-link-icon {
+  opacity: 1;
+  color: var(--color-vermilion);
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--color-vermilion);
+  transition: var(--transition-normal);
+}
+
+.nav-link:hover {
+  color: var(--color-vermilion);
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.nav-actions {
+  display: flex;
+  gap: var(--spacing-md);
+  align-items: center;
+}
+
+.nav-auth-placeholder {
+  position: relative;
+  width: 96px;
+  height: 40px;
+  border-radius: 999px;
+  border: 1px solid rgba(18, 17, 16, 0.08);
+  background: rgba(255, 255, 255, 0.6);
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(71, 52, 31, 0.06);
+}
+
+.nav-auth-placeholder__shimmer {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(188, 42, 24, 0.14) 48%, rgba(255, 255, 255, 0) 100%);
+  transform: translateX(-100%);
+  animation: navAuthShimmer 1.6s ease-in-out infinite;
+}
+
+.user-avatar {
+  cursor: pointer;
+  border: 1px solid var(--color-border);
+  border-radius: 4px; /* Less rounded */
+}
+
+.btn-secondary {
+  padding: 8px 24px;
+  border: 1px solid var(--color-ink-dark);
+  background: transparent;
+  color: var(--color-ink-dark);
+  border-radius: 2px;
+  font-size: 16px;
+  font-family: var(--font-poem);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.btn-secondary:hover {
+  background: var(--color-ink-dark);
+  color: var(--color-paper-light);
+  transform: translate(-1px, -1px);
+  box-shadow: 2px 2px 0 rgba(18, 17, 16, 0.2);
+}
+
+.btn-primary {
+  padding: 8px 24px;
+  border: 1px solid var(--color-vermilion);
+  background: var(--color-vermilion);
+  color: var(--color-paper-white);
+  border-radius: 2px;
+  font-size: 16px;
+  font-family: var(--font-poem);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.btn-primary:hover {
+  background: #a82515;
+  transform: translate(-1px, -1px);
+  box-shadow: 2px 2px 0 rgba(188, 42, 24, 0.3);
+}
+
+@keyframes navAuthShimmer {
+  100% {
+    transform: translateX(100%);
+  }
+}
