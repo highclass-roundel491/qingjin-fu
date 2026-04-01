@@ -7,11 +7,11 @@ services:
     environment:
       POSTGRES_DB: qingjin_fu
       POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: ${DATABASE_PASSWORD:-defaultpassword123}
+      POSTGRES_PASSWORD: ${DATABASE_PASSWORD:-change-this-password}
     ports:
       - "5432:5432"
     volumes:
-      - D:/qingjin-data/postgres:/var/lib/postgresql/data
+      - deploy_postgres_data:/var/lib/postgresql/data
       - ./data/init:/docker-entrypoint-initdb.d
     restart: unless-stopped
     healthcheck:
@@ -42,9 +42,9 @@ services:
     env_file:
       - ./backend/.env
     environment:
-      DATABASE_URL: postgresql+asyncpg://postgres:${DATABASE_PASSWORD:-defaultpassword123}@postgres:5432/qingjin_fu
+      DATABASE_URL: postgresql+asyncpg://postgres:${DATABASE_PASSWORD:-change-this-password}@postgres:5432/qingjin_fu
       REDIS_URL: redis://redis:6379/0
-      SECRET_KEY: ${SECRET_KEY:-qingjin-fu-team-dev-key}
+      SECRET_KEY: ${SECRET_KEY:-change-this-secret-key}
       AI_DEFAULT_MODEL_TIER: plus
       HTTP_PROXY: ""
       HTTPS_PROXY: ""
@@ -75,5 +75,6 @@ services:
     restart: unless-stopped
 
 volumes:
+  deploy_postgres_data:
   deploy_redis_data:
   upload_data:
