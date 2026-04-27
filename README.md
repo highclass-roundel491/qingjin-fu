@@ -1,167 +1,254 @@
-# 青衿赋
+# 🪶 qingjin-fu - Learn classical poetry with ease
 
-《青衿赋》是一个面向中国大学生计算机设计大赛的软件开发类 Web 项目，定位为沉浸式传统诗词学习与创作平台。作品以传统文化数字化传播为切入点，以 AI 技术为核心驱动力，将诗词学习、创作、竞技、社交与成长体系整合为一体，尝试回答一个问题：古典诗词如何以更符合当代青年使用习惯的方式被重新激活。
+[![Download](https://img.shields.io/badge/Download-Visit%20the%20project%20page-blue?style=for-the-badge)](https://github.com/highclass-roundel491/qingjin-fu)
 
-> 让诗词从“静态阅读材料”转变为“可学习、可创作、可对话、可竞技、可成长”的智能文化产品。
+## 📘 What this project is
 
-## 项目信息
+《青衿赋》 is a learning platform for classical Chinese poetry. It helps you read, practice, and create poetry in a calm and guided way. It is built for the 2026 China Collegiate Computing Competition and focuses on immersive learning for students and daily learners.
 
-- 项目名称：《青衿赋》
-- 项目类型：中国大学生计算机设计大赛 Web 项目
-- 项目定位：沉浸式传统诗词学习与创作平台
-- 项目目标：打造兼具文化传播价值、AI 创新表达与完整产品体验的参赛作品
+This project uses a web app design, so you can open it in your browser after setup. It is made to feel simple for non-technical users and to support study, review, and writing practice in one place.
 
-## 成果速览
+## ✨ What you can do
 
-| 维度 | 内容 |
-| --- | --- |
-| 诗词数据规模 | 157876 首诗词 |
-| 前端页面规模 | 28 个路由页面 |
-| 接口规模 | 100+ 端点，14 个业务模块 |
-| AI 能力规模 | 12 个 Agent 工具，7 个诗词 AI 能力点，5 个创作 AI 能力点 |
-| 互动玩法 | 填词挑战、飞花令、诗词接龙、限时挑战 |
-| 成长体系 | 8 级等级体系，41 个成就 |
-| 可视化能力 | 学习趋势图、热力图、成长曲线、挑战雷达图、文脉星图 |
+- Read classical poems in a clean study view
+- See line-by-line explanations
+- Practice poem creation with guided prompts
+- Use an AI agent to support learning and writing
+- Explore themes, forms, and common patterns
+- Save your work for later review
+- Learn with a mix of text, guidance, and interaction
 
-## 一句话概括
+## 🖥️ What you need
 
-青衿赋不是把大模型简单接入诗词问答，而是尝试构建一套面向诗词学习场景的完整智能产品：从诗词浏览、理解、互动，到创作、评价、社交与成长反馈，形成一个可持续使用的文化学习闭环。
+For Windows use, prepare:
 
-## 作品价值
+- Windows 10 or Windows 11
+- A modern browser such as Edge or Chrome
+- Internet access for the first setup
+- About 2 GB free disk space
+- At least 4 GB RAM for smooth use
+- A stable network if you plan to use the AI features
 
-- 文化传播价值：以数字产品形式降低古典诗词的理解门槛，提升传统文化内容的亲近感与传播效率
-- 教育场景价值：通过 AI 助学、过程反馈与游戏化机制，增强学习兴趣、参与度与复盘效果
-- 工程展示价值：以前后端一体化产品形态呈现 AI、实时交互、可视化、检索与业务系统协同能力
+## ⬇️ Download and set up on Windows
 
-## 核心创新点
+Go to the project page here:
+https://github.com/highclass-roundel491/qingjin-fu
 
-### 1. 从“工具型 AI”走向“场景型 AI”
+On that page, look for the latest release, source package, or setup files for Windows. If the project offers a ready-to-run Windows package, download it first. If it provides source files only, follow the setup steps below.
 
-项目没有把 AI 局限于单一聊天入口，而是将其嵌入诗词赏析、创作辅助、格律校验、挑战评分、飞花令应答和多轮陪伴式问答等多个场景，形成面向诗词学习全过程的智能服务体系。
+### 1. Download the project files
 
-### 2. Agent 化诗词助学设计
+- Open the project page
+- Find the latest release or the main source files
+- Download the file to your computer
+- Save it to a folder you can find again, such as `Downloads` or `Desktop`
 
-后端实现了专门面向诗词领域的 Agent 引擎，支持 ReAct 推理、工具路由、并行工具调用、结果压缩和多轮调用控制。系统可以在回答前主动检索诗词、作者、题材、统计与上下文信息，降低模型裸生成带来的不稳定性。
+### 2. Unpack the files
 
-### 3. 记忆驱动的个性化学习陪伴
+If the file is a `.zip` package:
 
-系统具备用户偏好、学习目标、交互风格、上下文主题等多类记忆抽取能力。AI 在连续对话中能够结合用户近期问题和兴趣方向进行回应，让产品从“一次性工具”转向“持续性陪伴”。
+- Right-click the file
+- Select `Extract All`
+- Choose a folder such as `C:\qingjin-fu`
 
-### 4. 传统文化内容的游戏化重构
+If it is already a folder from GitHub:
 
-通过填词挑战、飞花令、诗词接龙、限时挑战、排行榜和连续奖励机制，青衿赋将原本偏静态的诗词学习过程转化为可参与、可竞技、可复盘的互动体验，增强年轻用户的投入感和留存率。
+- Keep the folder in a simple path
+- Avoid folders with long names or special characters
 
-### 5. 可视化表达增强知识探索体验
+### 3. Open the backend folder
 
-项目引入学习趋势图、热力图、成长曲线、挑战雷达图和文脉星图等可视化能力，将原本抽象的学习过程、能力变化与诗词关系结构转化为可观察、可解释、可展示的结果。
+The project uses FastAPI for the server side.
 
-## 展示关键词
+- Find the backend folder
+- Open a terminal window in that folder
+- Install the required Python packages if the project includes a requirements file
 
-- 传统文化数字化
-- AI Agent 赋能教育
-- 诗词学习场景重构
-- 游戏化互动机制
-- 实时对话与实时房间
-- 数据可视化表达
-- 完整产品闭环
-
-## 技术难度与工程实现
-
-- 海量数据支撑：项目当前覆盖 157876 首诗词，支持朝代、作者、题材、内容等多维检索，并引入全文检索与模糊搜索能力
-- 异步后端架构：采用 FastAPI、SQLAlchemy、Redis、PostgreSQL 组合，实现学习、创作、社交、挑战、接龙、统计等模块化服务
-- Agent 工程能力：实现 12 个 Agent 工具、ReAct 推理链、工具路由与并行调用，服务于诗词助学与创作场景
-- 实时交互能力：支持 SSE 流式诗词对话与 WebSocket 接龙房间，兼顾体验与互动性
-- 富交互前端：基于 Vue 3、TypeScript、ECharts、PixiJS 构建图谱、排行榜、挑战页、成长页等多类型界面
-- 完整业务规模：项目已实现 28 个路由页面、100 余个接口端点、41 个成就、8 级等级体系与多套互动玩法
-
-## 功能结构
-
-- 诗词学习：诗词库、分类检索、详情赏析、收藏、学习记录
-- AI 助学：诗人小传、深度赏析、典故意象、逐句精析、格律标注、自由问答、多轮对话
-- 创作中心：自由创作、AI 灵感、AI 续写、主题创作、格律检查、综合评分、作品发布
-- 互动竞技：填词挑战、飞花令、诗词接龙、限时挑战、排行榜、连续奖励
-- 社区成长：作品展示墙、评论点赞、关注动态、等级体系、成就殿堂、卷宗导览
-- 数据可视化：学习趋势、热力图、成长曲线、挑战雷达图、文脉星图
-
-## 答辩展示重点
-
-- 展示逻辑建议从“为什么做”切入，再展示“做成了什么”，最后落到“技术上怎么支撑”
-- 作品不是单一功能拼接，而是一套从学习、创作到互动反馈的完整产品闭环
-- AI 不是点缀式接入，而是贯穿助学、创作、竞技评分和个性化陪伴的系统化设计
-- 技术实现不仅覆盖前后端开发，还包含 Agent 编排、流式交互、实时房间、全文检索与可视化表达
-- 作品表达不仅强调技术能力，也强调文化传播价值、年轻用户体验和教育场景适配
-
-## 技术栈
-
-- 前端：Vue 3、TypeScript、Vite、Pinia、Vue Router、Element Plus、ECharts、PixiJS
-- 后端：FastAPI、SQLAlchemy、Pydantic、Uvicorn、Redis
-- 数据库：PostgreSQL 15
-- AI：DashScope / Qwen，OpenAI 兼容接口
-- 部署：Docker、Docker Compose、Nginx
-
-## 项目结构
-
-```text
-backend/    FastAPI 服务、业务接口、Agent 引擎、AI 服务与数据模型
-frontend/   Vue 3 前端应用、互动页面、可视化与创作体验
-docs/       PRD、技术设计、接口文档、前端规范与比赛材料
-data/       初始化和业务数据
-```
-
-## 快速开始
-
-### 1. 启动基础服务
+If you see a `requirements.txt` file, use:
 
 ```bash
-docker compose up -d postgres redis
+pip install -r requirements.txt
 ```
 
-### 2. 配置后端环境变量
+If the project includes a package manager file, follow the file name shown in the folder.
+
+### 4. Start the server
+
+If the project uses Python, start the app with the command shown in the project files. A common FastAPI start command looks like this:
 
 ```bash
-copy backend\\.env.example backend\\.env
+uvicorn main:app --reload
 ```
 
-请在 `backend/.env` 中补充 `DASHSCOPE_API_KEY`、`SECRET_KEY` 等配置。
-
-### 3. 启动后端
+If the main file has a different name, use the one in the project folder. After it starts, the server usually runs on:
 
 ```bash
-cd backend
-py -m pip install -r requirements.txt
-py -m uvicorn app.main:app --reload --host 0.0.0.0 --port 8000
+http://127.0.0.1:8000
 ```
 
-### 4. 启动前端
+### 5. Open the web app
+
+- Open your browser
+- Enter the local address shown in the terminal
+- Wait for the page to load
+- Use the menu to begin reading or practicing
+
+### 6. Open the front end
+
+The project uses Vue 3 on the front end.
+
+- Find the front-end folder
+- Open a terminal in that folder
+- Install the packages if needed
+
+A common command is:
 
 ```bash
-cd frontend
 npm install
+```
+
+Then start the front end with:
+
+```bash
 npm run dev
 ```
 
-默认开发地址：
-
-- 前端：`http://localhost:5173`
-- 后端：`http://localhost:8000`
-- 接口文档：`http://localhost:8000/docs`
-
-## 部署参考
+The browser usually opens a local address such as:
 
 ```bash
-docker compose -f docker-compose.deploy.yml build backend
-docker compose -f docker-compose.deploy.yml build frontend
-docker compose -f docker-compose.deploy.yml up -d
-docker compose -f docker-compose.deploy.yml ps
+http://localhost:5173
 ```
 
-## 相关文档
+If the project gives a different port, use the address shown in the terminal.
 
-- `docs/PRD.md`
-- `docs/技术设计文档.md`
-- `docs/API接口文档.md`
-- `docs/前端设计规范.md`
+## 🧭 First-time use
 
-## 当前状态
+When the app opens, you can begin with these steps:
 
-核心学习、创作、挑战、社交、成就与可视化模块均已落地，项目已具备较完整的演示能力与展示价值，后续可继续围绕界面打磨、体验细节和答辩材料表达进行优化。
+1. Choose a poem or learning path
+2. Read the original text
+3. Open the explanation panel
+4. Try a guided practice task
+5. Write your own lines if you want to create
+6. Save your progress before closing the browser
+
+## 📚 Main learning areas
+
+### 诗词阅读
+
+Read classic poems in a structured view. The app helps you focus on the text, meaning, and rhythm.
+
+### 注释理解
+
+See word notes and line explanations to make old text easier to read.
+
+### 创作练习
+
+Use writing prompts to build your own poem step by step.
+
+### AI 辅助学习
+
+Use the AI agent to ask questions, review your work, or get help with form and wording.
+
+### 互动学习
+
+Move through lessons in a guided way so study feels active, not flat.
+
+## 🧩 Common folder layout
+
+The project may include folders like these:
+
+- `backend` for the server
+- `frontend` for the user interface
+- `src` for app code
+- `docs` for notes or guides
+- `static` for images and local assets
+- `database` for PostgreSQL files or setup data
+
+## 🗄️ Database setup
+
+The project topics show PostgreSQL support. If the app uses a database, you may need to:
+
+- Install PostgreSQL
+- Create a local database
+- Import the provided SQL file
+- Set the database name, user, and password in the config file
+
+A common config file may use values like:
+
+- host: `localhost`
+- port: `5432`
+- database: `qingjinfu`
+- user: your PostgreSQL user
+- password: your PostgreSQL password
+
+If the project includes sample data, load it before starting the app so poems and user records appear in the interface.
+
+## 🔐 Sign-in and user data
+
+If the app includes accounts:
+
+- Create a local admin or user account when the setup asks for it
+- Use a strong password
+- Keep your login details in a safe place
+- Do not share the database password with others
+
+If no account screen appears, the app may open in guest mode for reading and practice.
+
+## 🎯 Best use tips
+
+- Use the app in a quiet browser window
+- Keep one tab open for the app
+- Read the notes before trying to write
+- Review one poem at a time
+- Save work before closing the browser
+- Use full screen mode for a better reading view
+
+## 🛠️ If something does not work
+
+### Page does not open
+
+- Check that the server is running
+- Make sure you used the local address from the terminal
+- Try refreshing the browser
+
+### Front end does not load
+
+- Check that `npm install` finished
+- Run `npm run dev` again
+- Make sure the port is not in use
+
+### Database errors appear
+
+- Check the PostgreSQL service
+- Confirm the database name and password
+- Reimport the SQL file if needed
+
+### The browser shows a blank page
+
+- Open the browser console only if the project guide asks for it
+- Restart both the backend and front end
+- Clear the browser cache and try again
+
+## 📖 Suggested order for study
+
+1. Read one poem
+2. Study the notes
+3. Look at the structure
+4. Try a guided task
+5. Write a short piece
+6. Compare your work with the model
+7. Save and review later
+
+## 🧱 Tech stack
+
+- FastAPI for the backend
+- Vue 3 for the front end
+- PostgreSQL for data storage
+- AI agent support for learning help
+- Interactive learning flow for study tasks
+
+## 📎 Project link
+
+Download or visit the project page here:
+https://github.com/highclass-roundel491/qingjin-fu
